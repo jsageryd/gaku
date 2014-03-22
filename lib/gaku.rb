@@ -1,8 +1,5 @@
 # encoding: utf-8
 
-module Gaku
-  VERSION = '0.0.0'
-
-  require 'gaku/cli'
-  require 'gaku/core'
-end
+require 'gaku/cli'
+require 'gaku/core'
+require 'gaku/version'
