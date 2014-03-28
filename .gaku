@@ -1,0 +1,9 @@
+# encoding: utf-8
+
+# Copy this file to ~/.gaku to to set configuration values.
+
+# Directory containing decks
+gaku.deck_root = '.'
+
+# Distance to set for a card seen for the first time
+gaku.initial_distance = 8
