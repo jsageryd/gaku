@@ -1,0 +1,77 @@
+[
+  {
+    "front": "cat",
+    "back": "kissa",
+    "match": "kissa"
+  },
+  {
+    "front": "dog",
+    "back": "koira",
+    "match": "koira"
+  },
+  {
+    "front": "horse",
+    "back": "hevonen",
+    "match": "hevonen"
+  },
+  {
+    "front": "giraffe",
+    "back": "kirahvi",
+    "match": "kirahvi"
+  },
+  {
+    "front": "hippopotamus",
+    "back": "virtahepo",
+    "match": "virtahepo"
+  },
+  {
+    "front": "rhinoceros",
+    "back": "sarvikuono",
+    "match": "sarvikuono"
+  },
+  {
+    "front": "bird",
+    "back": "lintu",
+    "match": "lintu"
+  },
+  {
+    "front": "frog",
+    "back": "sammakko",
+    "match": "sammakko"
+  },
+  {
+    "front": "ant",
+    "back": "muurahainen",
+    "match": "muurahainen"
+  },
+  {
+    "front": "fly",
+    "back": "kärpänen",
+    "match": "kärpänen"
+  },
+  {
+    "front": "lizard",
+    "back": "lisko",
+    "match": "lisko"
+  },
+  {
+    "front": "fox",
+    "back": "kettu",
+    "match": "kettu"
+  },
+  {
+    "front": "fish",
+    "back": "kala",
+    "match": "kala"
+  },
+  {
+    "front": "snail",
+    "back": "etana",
+    "match": "etana"
+  },
+  {
+    "front": "monkey",
+    "back": "apina",
+    "match": "apina"
+  }
+]
