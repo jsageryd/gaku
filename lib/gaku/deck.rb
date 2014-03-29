@@ -38,7 +38,7 @@ module Gaku
     # Moves the first card down +distance+ places
     def move_first(distance)
       distance > 0 or raise ArgumentError, 'Distance must be > 0'
-      @deck.insert(distance, @deck.shift)
+      @deck.insert([distance, length - 1].min, @deck.shift)
     end
 
     private
