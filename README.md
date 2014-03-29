@@ -1,6 +1,6 @@
 # Gaku
 
-Gaku is soon to be a simple [SRS](https://en.wikipedia.org/wiki/Spaced_repetition#Software).
+Gaku is an experimental [SRS](https://en.wikipedia.org/wiki/Spaced_repetition#Software).
 
 ## Installation
 1. Clone this repo.
