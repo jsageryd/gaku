@@ -4,12 +4,11 @@ Gaku is soon to be a simple [SRS](https://en.wikipedia.org/wiki/Spaced_repetitio
 
 ## Installation
 1. Clone this repo.
-2. Make sure the `Gemfile` is satisfied by running `bundle`
-   (in case `bundle` not found, run `gem install bundler`).
-3. Set your `$PATH` so that `bin/gaku` is accessible.
+2. Set your `$PATH` so that `bin/gaku` is accessible (or just run it from there).
 
 ## Usage
-1. `gaku`
+1. Copy `.gaku` to your home directory (`~/.gaku`) and configure as desired.
+2. Run `gaku`.
 
 ## Licence
 Copyright (c) 2014 Johan Sageryd <j@1616.se>
