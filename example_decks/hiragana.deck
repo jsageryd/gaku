@@ -1,0 +1,887 @@
+[
+  {
+    "front": "あ",
+    "back": "a",
+    "match": "/^a$/i"
+  },
+  {
+    "front": "い",
+    "back": "i",
+    "match": "/^i$/i"
+  },
+  {
+    "front": "う",
+    "back": "u",
+    "match": "/^u$/i"
+  },
+  {
+    "front": "え",
+    "back": "e",
+    "match": "/^e$/i"
+  },
+  {
+    "front": "お",
+    "back": "o",
+    "match": "/^o$/i"
+  },
+  {
+    "front": "か",
+    "back": "ka",
+    "match": "/^ka$/i"
+  },
+  {
+    "front": "き",
+    "back": "ki",
+    "match": "/^ki$/i"
+  },
+  {
+    "front": "く",
+    "back": "ku",
+    "match": "/^ku$/i"
+  },
+  {
+    "front": "け",
+    "back": "ke",
+    "match": "/^ke$/i"
+  },
+  {
+    "front": "こ",
+    "back": "ko",
+    "match": "/^ko$/i"
+  },
+  {
+    "front": "さ",
+    "back": "sa",
+    "match": "/^sa$/i"
+  },
+  {
+    "front": "し",
+    "back": "shi",
+    "match": "/^sh?i$/i"
+  },
+  {
+    "front": "す",
+    "back": "su",
+    "match": "/^su$/i"
+  },
+  {
+    "front": "せ",
+    "back": "se",
+    "match": "/^se$/i"
+  },
+  {
+    "front": "そ",
+    "back": "so",
+    "match": "/^so$/i"
+  },
+  {
+    "front": "た",
+    "back": "ta",
+    "match": "/^ta$/i"
+  },
+  {
+    "front": "ち",
+    "back": "chi",
+    "match": "/^(ch|t)i$/i"
+  },
+  {
+    "front": "つ",
+    "back": "tsu",
+    "match": "/^ts?u$/i"
+  },
+  {
+    "front": "て",
+    "back": "te",
+    "match": "/^te$/i"
+  },
+  {
+    "front": "と",
+    "back": "to",
+    "match": "/^to$/i"
+  },
+  {
+    "front": "な",
+    "back": "na",
+    "match": "/^na$/i"
+  },
+  {
+    "front": "に",
+    "back": "ni",
+    "match": "/^ni$/i"
+  },
+  {
+    "front": "ぬ",
+    "back": "nu",
+    "match": "/^nu$/i"
+  },
+  {
+    "front": "ね",
+    "back": "ne",
+    "match": "/^ne$/i"
+  },
+  {
+    "front": "の",
+    "back": "no",
+    "match": "/^no$/i"
+  },
+  {
+    "front": "は",
+    "back": "ha",
+    "match": "/^ha$/i"
+  },
+  {
+    "front": "ひ",
+    "back": "hi",
+    "match": "/^hi$/i"
+  },
+  {
+    "front": "ふ",
+    "back": "fu",
+    "match": "/^[fh]u$/i"
+  },
+  {
+    "front": "へ",
+    "back": "he",
+    "match": "/^he$/i"
+  },
+  {
+    "front": "ほ",
+    "back": "ho",
+    "match": "/^ho$/i"
+  },
+  {
+    "front": "ま",
+    "back": "ma",
+    "match": "/^ma$/i"
+  },
+  {
+    "front": "み",
+    "back": "mi",
+    "match": "/^mi$/i"
+  },
+  {
+    "front": "む",
+    "back": "mu",
+    "match": "/^mu$/i"
+  },
+  {
+    "front": "め",
+    "back": "me",
+    "match": "/^me$/i"
+  },
+  {
+    "front": "も",
+    "back": "mo",
+    "match": "/^mo$/i"
+  },
+  {
+    "front": "や",
+    "back": "ya",
+    "match": "/^ya$/i"
+  },
+  {
+    "front": "ゆ",
+    "back": "yu",
+    "match": "/^yu$/i"
+  },
+  {
+    "front": "よ",
+    "back": "yo",
+    "match": "/^yo$/i"
+  },
+  {
+    "front": "ら",
+    "back": "ra",
+    "match": "/^[lr]a$/i"
+  },
+  {
+    "front": "り",
+    "back": "ri",
+    "match": "/^[lr]i$/i"
+  },
+  {
+    "front": "る",
+    "back": "ru",
+    "match": "/^[lr]u$/i"
+  },
+  {
+    "front": "れ",
+    "back": "re",
+    "match": "/^[lr]e$/i"
+  },
+  {
+    "front": "ろ",
+    "back": "ro",
+    "match": "/^[lr]o$/i"
+  },
+  {
+    "front": "わ",
+    "back": "wa",
+    "match": "/^wa$/i"
+  },
+  {
+    "front": "を",
+    "back": "wo",
+    "match": "/^wo$/i"
+  },
+  {
+    "front": "ん",
+    "back": "n",
+    "match": "/^(nn?|n')$/i"
+  },
+  {
+    "front": "が",
+    "back": "ga",
+    "match": "/^ga$/i"
+  },
+  {
+    "front": "ぎ",
+    "back": "gi",
+    "match": "/^gi$/i"
+  },
+  {
+    "front": "ぐ",
+    "back": "gu",
+    "match": "/^gu$/i"
+  },
+  {
+    "front": "げ",
+    "back": "ge",
+    "match": "/^ge$/i"
+  },
+  {
+    "front": "ご",
+    "back": "go",
+    "match": "/^go$/i"
+  },
+  {
+    "front": "ざ",
+    "back": "za",
+    "match": "/^za$/i"
+  },
+  {
+    "front": "じ",
+    "back": "ji",
+    "match": "/^[jz]i$/i"
+  },
+  {
+    "front": "ず",
+    "back": "zu",
+    "match": "/^zu$/i"
+  },
+  {
+    "front": "ぜ",
+    "back": "ze",
+    "match": "/^ze$/i"
+  },
+  {
+    "front": "ぞ",
+    "back": "zo",
+    "match": "/^zo$/i"
+  },
+  {
+    "front": "だ",
+    "back": "da",
+    "match": "/^da$/i"
+  },
+  {
+    "front": "ぢ",
+    "back": "ji",
+    "match": "/^(d[jz]?|[jz])i$/i"
+  },
+  {
+    "front": "づ",
+    "back": "zu",
+    "match": "/^(dz?|z)u$/i"
+  },
+  {
+    "front": "で",
+    "back": "de",
+    "match": "/^de$/i"
+  },
+  {
+    "front": "ど",
+    "back": "do",
+    "match": "/^do$/i"
+  },
+  {
+    "front": "ば",
+    "back": "ba",
+    "match": "/^ba$/i"
+  },
+  {
+    "front": "び",
+    "back": "bi",
+    "match": "/^bi$/i"
+  },
+  {
+    "front": "ぶ",
+    "back": "bu",
+    "match": "/^bu$/i"
+  },
+  {
+    "front": "べ",
+    "back": "be",
+    "match": "/^be$/i"
+  },
+  {
+    "front": "ぼ",
+    "back": "bo",
+    "match": "/^bo$/i"
+  },
+  {
+    "front": "ぱ",
+    "back": "pa",
+    "match": "/^pa$/i"
+  },
+  {
+    "front": "ぴ",
+    "back": "pi",
+    "match": "/^pi$/i"
+  },
+  {
+    "front": "ぷ",
+    "back": "pu",
+    "match": "/^pu$/i"
+  },
+  {
+    "front": "ぺ",
+    "back": "pe",
+    "match": "/^pe$/i"
+  },
+  {
+    "front": "ぽ",
+    "back": "po",
+    "match": "/^po$/i"
+  },
+  {
+    "front": "ゐ",
+    "back": "wi",
+    "match": "/^wy?i$/i"
+  },
+  {
+    "front": "ゑ",
+    "back": "we",
+    "match": "/^wy?e$/i"
+  },
+  {
+    "front": "きゃ",
+    "back": "kya",
+    "match": "/^kya$/i"
+  },
+  {
+    "front": "きゅ",
+    "back": "kyu",
+    "match": "/^kyu$/i"
+  },
+  {
+    "front": "きょ",
+    "back": "kyo",
+    "match": "/^kyo$/i"
+  },
+  {
+    "front": "ぎゃ",
+    "back": "gya",
+    "match": "/^gya$/i"
+  },
+  {
+    "front": "ぎゅ",
+    "back": "gyu",
+    "match": "/^gyu$/i"
+  },
+  {
+    "front": "ぎょ",
+    "back": "gyo",
+    "match": "/^gyo$/i"
+  },
+  {
+    "front": "しゃ",
+    "back": "sha",
+    "match": "/^s[hy]a$/i"
+  },
+  {
+    "front": "しゅ",
+    "back": "shu",
+    "match": "/^s[hy]u$/i"
+  },
+  {
+    "front": "しょ",
+    "back": "sho",
+    "match": "/^s[hy]o$/i"
+  },
+  {
+    "front": "じゃ",
+    "back": "ja",
+    "match": "/^(jy?|zy)a$/i"
+  },
+  {
+    "front": "じゅ",
+    "back": "ju",
+    "match": "/^(jy?|zy)u$/i"
+  },
+  {
+    "front": "じょ",
+    "back": "jo",
+    "match": "/^(jy?|zy)o$/i"
+  },
+  {
+    "front": "ちゃ",
+    "back": "cha",
+    "match": "/^(ch|ty)a$/i"
+  },
+  {
+    "front": "ちゅ",
+    "back": "chu",
+    "match": "/^(ch|ty)u$/i"
+  },
+  {
+    "front": "ちょ",
+    "back": "cho",
+    "match": "/^(ch|ty)o$/i"
+  },
+  {
+    "front": "ぢゃ",
+    "back": "ja",
+    "match": "/^(jy?|d[jy])a$/i"
+  },
+  {
+    "front": "ぢゅ",
+    "back": "dyu",
+    "match": "/^(jy?|d[jy])u$/i"
+  },
+  {
+    "front": "ぢょ",
+    "back": "dyo",
+    "match": "/^(jy?|d[jy])o$/i"
+  },
+  {
+    "front": "にゃ",
+    "back": "nya",
+    "match": "/^nya$/i"
+  },
+  {
+    "front": "にゅ",
+    "back": "nyu",
+    "match": "/^nyu$/i"
+  },
+  {
+    "front": "にょ",
+    "back": "nyo",
+    "match": "/^nyo$/i"
+  },
+  {
+    "front": "ひゃ",
+    "back": "hya",
+    "match": "/^hya$/i"
+  },
+  {
+    "front": "ひゅ",
+    "back": "hyu",
+    "match": "/^hyu$/i"
+  },
+  {
+    "front": "ひょ",
+    "back": "hyo",
+    "match": "/^hyo$/i"
+  },
+  {
+    "front": "びゃ",
+    "back": "bya",
+    "match": "/^bya$/i"
+  },
+  {
+    "front": "びゅ",
+    "back": "byu",
+    "match": "/^byu$/i"
+  },
+  {
+    "front": "びょ",
+    "back": "byo",
+    "match": "/^byo$/i"
+  },
+  {
+    "front": "ぴゃ",
+    "back": "pya",
+    "match": "/^pya$/i"
+  },
+  {
+    "front": "ぴゅ",
+    "back": "pyu",
+    "match": "/^pyu$/i"
+  },
+  {
+    "front": "ぴょ",
+    "back": "pyo",
+    "match": "/^pyo$/i"
+  },
+  {
+    "front": "みゃ",
+    "back": "mya",
+    "match": "/^mya$/i"
+  },
+  {
+    "front": "みゅ",
+    "back": "myu",
+    "match": "/^myu$/i"
+  },
+  {
+    "front": "みょ",
+    "back": "myo",
+    "match": "/^myo$/i"
+  },
+  {
+    "front": "りゃ",
+    "back": "rya",
+    "match": "/^[lr]ya$/i"
+  },
+  {
+    "front": "りゅ",
+    "back": "ryu",
+    "match": "/^[lr]yu$/i"
+  },
+  {
+    "front": "りょ",
+    "back": "ryo",
+    "match": "/^[lr]yo$/i"
+  },
+  {
+    "front": "きぇ",
+    "back": "kye",
+    "match": "/^kye$/i"
+  },
+  {
+    "front": "ぎぇ",
+    "back": "gye",
+    "match": "/^gye$/i"
+  },
+  {
+    "front": "しぇ",
+    "back": "she",
+    "match": "/^s[hy]e$/i"
+  },
+  {
+    "front": "じぇ",
+    "back": "je",
+    "match": "/^(jy?|zy)e$/i"
+  },
+  {
+    "front": "ちぇ",
+    "back": "che",
+    "match": "/^(ch|ty)e$/i"
+  },
+  {
+    "front": "ぢぇ",
+    "back": "je",
+    "match": "/^(jy?|d[jy])e$/i"
+  },
+  {
+    "front": "にぇ",
+    "back": "nye",
+    "match": "/^nye$/i"
+  },
+  {
+    "front": "ひぇ",
+    "back": "hye",
+    "match": "/^hye$/i"
+  },
+  {
+    "front": "びぇ",
+    "back": "bye",
+    "match": "/^bye$/i"
+  },
+  {
+    "front": "ぴぇ",
+    "back": "pye",
+    "match": "/^pye$/i"
+  },
+  {
+    "front": "みぇ",
+    "back": "mye",
+    "match": "/^mye$/i"
+  },
+  {
+    "front": "いぇ",
+    "back": "ye",
+    "match": "/^ye$/i"
+  },
+  {
+    "front": "りぇ",
+    "back": "rye",
+    "match": "/^[lr]ye$/i"
+  },
+  {
+    "front": "ゔぁ",
+    "back": "va",
+    "match": "/^va$/i"
+  },
+  {
+    "front": "ゔぃ",
+    "back": "vi",
+    "match": "/^vi$/i"
+  },
+  {
+    "front": "ゔ",
+    "back": "vu",
+    "match": "/^vu$/i"
+  },
+  {
+    "front": "ゔぇ",
+    "back": "ve",
+    "match": "/^ve$/i"
+  },
+  {
+    "front": "ゔぉ",
+    "back": "vo",
+    "match": "/^vo$/i"
+  },
+  {
+    "front": "うぁ",
+    "back": "wa",
+    "match": "/^wa$/i"
+  },
+  {
+    "front": "うぃ",
+    "back": "wi",
+    "match": "/^wi$/i"
+  },
+  {
+    "front": "うぇ",
+    "back": "we",
+    "match": "/^we$/i"
+  },
+  {
+    "front": "うぉ",
+    "back": "wo",
+    "match": "/^wo$/i"
+  },
+  {
+    "front": "ふぁ",
+    "back": "fa",
+    "match": "/^fa$/i"
+  },
+  {
+    "front": "ふぃ",
+    "back": "fi",
+    "match": "/^fi$/i"
+  },
+  {
+    "front": "ふぇ",
+    "back": "fe",
+    "match": "/^fe$/i"
+  },
+  {
+    "front": "ふぉ",
+    "back": "fo",
+    "match": "/^fo$/i"
+  },
+  {
+    "front": "てぃ",
+    "back": "ti",
+    "match": "/^th?i$/i"
+  },
+  {
+    "front": "でぃ",
+    "back": "di",
+    "match": "/^dh?i$/i"
+  },
+  {
+    "front": "とぅ",
+    "back": "tu",
+    "match": "/^tu$/i"
+  },
+  {
+    "front": "どぅ",
+    "back": "du",
+    "match": "/^du$/i"
+  },
+  {
+    "front": "くぁ",
+    "back": "kwa",
+    "match": "/^kwa$/i"
+  },
+  {
+    "front": "くぃ",
+    "back": "kwi",
+    "match": "/^kwi$/i"
+  },
+  {
+    "front": "くぇ",
+    "back": "kwe",
+    "match": "/^kwe$/i"
+  },
+  {
+    "front": "くぉ",
+    "back": "kwo",
+    "match": "/^kwo$/i"
+  },
+  {
+    "front": "ぐぁ",
+    "back": "gwa",
+    "match": "/^gwa$/i"
+  },
+  {
+    "front": "ぐぃ",
+    "back": "gwi",
+    "match": "/^gwi$/i"
+  },
+  {
+    "front": "ぐぇ",
+    "back": "gwe",
+    "match": "/^gwe$/i"
+  },
+  {
+    "front": "ぐぉ",
+    "back": "gwo",
+    "match": "/^gwo$/i"
+  },
+  {
+    "front": "すぇ",
+    "back": "swe",
+    "match": "/^swe$/i"
+  },
+  {
+    "front": "すぉ",
+    "back": "swo",
+    "match": "/^swo$/i"
+  },
+  {
+    "front": "ずぁ",
+    "back": "zwa",
+    "match": "/^zwa$/i"
+  },
+  {
+    "front": "ずぃ",
+    "back": "zwi",
+    "match": "/^zwi$/i"
+  },
+  {
+    "front": "ずぇ",
+    "back": "zwe",
+    "match": "/^zwe$/i"
+  },
+  {
+    "front": "ずぉ",
+    "back": "zwo",
+    "match": "/^zwo$/i"
+  },
+  {
+    "front": "とぁ",
+    "back": "twa",
+    "match": "/^twa$/i"
+  },
+  {
+    "front": "とぃ",
+    "back": "twi",
+    "match": "/^twi$/i"
+  },
+  {
+    "front": "とぇ",
+    "back": "twe",
+    "match": "/^twe$/i"
+  },
+  {
+    "front": "どぁ",
+    "back": "dwa",
+    "match": "/^dwa$/i"
+  },
+  {
+    "front": "どぃ",
+    "back": "dwi",
+    "match": "/^dwi$/i"
+  },
+  {
+    "front": "どぇ",
+    "back": "dwe",
+    "match": "/^dwe$/i"
+  },
+  {
+    "front": "どぉ",
+    "back": "dwo",
+    "match": "/^dwo$/i"
+  },
+  {
+    "front": "ぬぃ",
+    "back": "nwi",
+    "match": "/^nwi$/i"
+  },
+  {
+    "front": "ぬぇ",
+    "back": "nwe",
+    "match": "/^nwe$/i"
+  },
+  {
+    "front": "ぬぉ",
+    "back": "nwo",
+    "match": "/^nwo$/i"
+  },
+  {
+    "front": "ふゎ",
+    "back": "fwa",
+    "match": "/^[fh]wa$/i"
+  },
+  {
+    "front": "ぶゎ",
+    "back": "bwa",
+    "match": "/^bwa$/i"
+  },
+  {
+    "front": "ぶぃ",
+    "back": "bwi",
+    "match": "/^bwi$/i"
+  },
+  {
+    "front": "ぶぇ",
+    "back": "bwe",
+    "match": "/^bwe$/i"
+  },
+  {
+    "front": "ぶぉ",
+    "back": "bwo",
+    "match": "/^bwo$/i"
+  },
+  {
+    "front": "ぷゎ",
+    "back": "pwa",
+    "match": "/^pwa$/i"
+  },
+  {
+    "front": "ぷぃ",
+    "back": "pwi",
+    "match": "/^pwi$/i"
+  },
+  {
+    "front": "ぷぅ",
+    "back": "pwu",
+    "match": "/^pwu$/i"
+  },
+  {
+    "front": "ぷぇ",
+    "back": "pwe",
+    "match": "/^pwe$/i"
+  },
+  {
+    "front": "ぷぉ",
+    "back": "pwo",
+    "match": "/^pwo$/i"
+  },
+  {
+    "front": "むゎ",
+    "back": "mwa",
+    "match": "/^mwa$/i"
+  },
+  {
+    "front": "むぃ",
+    "back": "mwi",
+    "match": "/^mwi$/i"
+  },
+  {
+    "front": "むぇ",
+    "back": "mwe",
+    "match": "/^mwe$/i"
+  },
+  {
+    "front": "むぉ",
+    "back": "mwo",
+    "match": "/^mwo$/i"
+  }
+]
