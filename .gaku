@@ -6,4 +6,4 @@
 gaku.deck_root = '.'
 
 # Distance to set for a card seen for the first time
-gaku.initial_distance = 8
+gaku.initial_distance = 4
