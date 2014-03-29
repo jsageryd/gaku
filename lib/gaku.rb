@@ -2,4 +2,5 @@
 
 require 'gaku/cli'
 require 'gaku/config'
+require 'gaku/errors'
 require 'gaku/version'
