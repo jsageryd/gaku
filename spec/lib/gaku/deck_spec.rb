@@ -67,9 +67,9 @@ describe Gaku::Deck do
   end
 
   describe '#move_first' do
-    it 'moves the first card down specified number of places' do
+    it 'moves the first card down to the specified place' do
       expect {
-        subject.move_first(1)
+        subject.move_first(2)
       }.to change { subject.instance_variable_get(:@deck) }.from(
         [
           {
