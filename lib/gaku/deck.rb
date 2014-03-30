@@ -41,6 +41,18 @@ module Gaku
       @deck.insert([distance, length - 1].min, @deck.shift)
     end
 
+    # Returns a hash with statistics
+    def stats
+      stats = {
+        card_count: @deck.count,
+        seen_count: @deck.count { |c| c.has_key?(:last_seen) },
+        known_count: @deck.count { |c| c[:known] },
+        unknown_count: @deck.count { |c| c[:known] == false }
+      }
+      stats[:unseen_count] = stats[:card_count] - stats[:seen_count]
+      stats
+    end
+
     private
 
     def read_deck(io)
