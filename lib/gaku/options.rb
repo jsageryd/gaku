@@ -23,7 +23,14 @@ module Gaku
           invalid_options << arg
         end
       end
-      invalid_options.empty? or raise InvalidOption, invalid_options
+      if not invalid_options.empty?
+        msg = if invalid_options.length > 1
+          "Invalid options #{invalid_options.map { |o| "'#{o}'" }.join(', ')}"
+        else
+          "Invalid option '#{invalid_options.first}'"
+        end
+        raise InvalidOption, msg
+      end
       ensure_options_valid(@options)
     end
 
