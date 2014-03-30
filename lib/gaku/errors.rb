@@ -6,4 +6,5 @@ module Gaku
   class InvalidDeck < GakuError; end
   class InvalidOption < GakuError; end
   class InvalidOptionUsage < GakuError; end
+  class ConfigError < GakuError; end
 end

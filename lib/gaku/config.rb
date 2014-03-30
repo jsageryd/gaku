@@ -20,13 +20,8 @@ module Gaku
       @instance ||= self
     end
 
-    def valid?
-      !@invalid
-    end
-
     def method_missing(name, _)
-      @invalid = true
-      puts "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{CONFIG_FILE})"
+      raise ConfigError, "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{CONFIG_FILE})"
     end
   end
 end

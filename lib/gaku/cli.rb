@@ -3,8 +3,12 @@
 module Gaku
   class CLI
     def initialize(argv)
-      @config = Config.new
-      exit 1 unless @config.valid?
+      begin
+        @config = Config.new
+      rescue GakuError => e
+        puts e.message
+        exit 1
+      end
       print_banner
       if argv.empty?
         @deck = ask_for_deck
