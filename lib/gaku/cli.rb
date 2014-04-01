@@ -115,10 +115,7 @@ module Gaku
           id = gets
           raise Interrupt if id.nil?
           id.strip!
-          unless id =~ /^[0-9]+$/ && id.to_i >= 0 && id.to_i < Croupier.decks.length
-            puts 'Invalid deck id'
-            next
-          end
+          next unless id =~ /^\d+$/ && (0...Croupier.decks.length).cover?(id.to_i)
           deck = Croupier.load_deck(Croupier.decks[id.to_i])
         rescue InvalidDeck
           puts 'Invalid deck'
