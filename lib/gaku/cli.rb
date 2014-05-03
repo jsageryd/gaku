@@ -4,21 +4,18 @@ module Gaku
   class CLI
     def initialize(argv)
       Signal.trap('SIGINT') { quit }
+      @options = Options.new(argv).options
+      @options[:stats] and raise 'Stats not implemented'
       @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
       @input = Input.new
       @input.on_quit { quit }
-      if argv.empty?
+      deck_name = @options[:deck] ? @options[:deck][:argument] : nil
+      if deck_name.nil?
         @deck = ask_for_deck
-        @canvas.puts("Deck '#{@deck.name}' loaded.")
-        @canvas.puts
       else
-        deck_name = argv.shift
-        argv.clear
         if Croupier.decks.include?(deck_name)
           @deck = Croupier.load_deck(deck_name)
-          @canvas.puts("Deck '#{@deck.name}' loaded.")
-          @canvas.puts
         else
           @canvas.puts("Invalid deck '#{deck_name}'")
           @canvas.puts('Available decks: ')
@@ -26,6 +23,8 @@ module Gaku
           exit 1
         end
       end
+      @canvas.puts("Deck '#{@deck.name}' loaded.")
+      @canvas.puts
       quiz(@deck)
     end
 
