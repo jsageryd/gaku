@@ -1,0 +1,592 @@
+[
+  {
+    "front": "Ac",
+    "back": "Aktinium",
+    "match": "/^Aktinium$/i"
+  },
+  {
+    "front": "Ag",
+    "back": "Silver",
+    "match": "/^Silver$/i"
+  },
+  {
+    "front": "Al",
+    "back": "Aluminium",
+    "match": "/^Aluminium$/i"
+  },
+  {
+    "front": "Am",
+    "back": "Americium",
+    "match": "/^Americium$/i"
+  },
+  {
+    "front": "Ar",
+    "back": "Argon",
+    "match": "/^Argon$/i"
+  },
+  {
+    "front": "As",
+    "back": "Arsenik",
+    "match": "/^Arsenik$/i"
+  },
+  {
+    "front": "At",
+    "back": "Astat",
+    "match": "/^Astat$/i"
+  },
+  {
+    "front": "Au",
+    "back": "Guld",
+    "match": "/^Guld$/i"
+  },
+  {
+    "front": "B",
+    "back": "Bor",
+    "match": "/^Bor$/i"
+  },
+  {
+    "front": "Ba",
+    "back": "Barium",
+    "match": "/^Barium$/i"
+  },
+  {
+    "front": "Be",
+    "back": "Beryllium",
+    "match": "/^Beryllium$/i"
+  },
+  {
+    "front": "Bh",
+    "back": "Bohrium",
+    "match": "/^Bohrium$/i"
+  },
+  {
+    "front": "Bi",
+    "back": "Vismut",
+    "match": "/^Vismut$/i"
+  },
+  {
+    "front": "Bk",
+    "back": "Berkelium",
+    "match": "/^Berkelium$/i"
+  },
+  {
+    "front": "Br",
+    "back": "Brom",
+    "match": "/^Brom$/i"
+  },
+  {
+    "front": "C",
+    "back": "Kol",
+    "match": "/^Kol$/i"
+  },
+  {
+    "front": "Ca",
+    "back": "Kalcium",
+    "match": "/^Kalcium$/i"
+  },
+  {
+    "front": "Cd",
+    "back": "Kadmium",
+    "match": "/^Kadmium$/i"
+  },
+  {
+    "front": "Ce",
+    "back": "Cerium",
+    "match": "/^Cerium$/i"
+  },
+  {
+    "front": "Cf",
+    "back": "Californium",
+    "match": "/^Californium$/i"
+  },
+  {
+    "front": "Cl",
+    "back": "Klor",
+    "match": "/^Klor$/i"
+  },
+  {
+    "front": "Cm",
+    "back": "Curium",
+    "match": "/^Curium$/i"
+  },
+  {
+    "front": "Cn",
+    "back": "Copernicium",
+    "match": "/^Copernicium$/i"
+  },
+  {
+    "front": "Co",
+    "back": "Kobolt",
+    "match": "/^Kobolt$/i"
+  },
+  {
+    "front": "Cr",
+    "back": "Krom",
+    "match": "/^Krom$/i"
+  },
+  {
+    "front": "Cs",
+    "back": "Cesium",
+    "match": "/^Cesium$/i"
+  },
+  {
+    "front": "Cu",
+    "back": "Koppar",
+    "match": "/^Koppar$/i"
+  },
+  {
+    "front": "Db",
+    "back": "Dubnium",
+    "match": "/^Dubnium$/i"
+  },
+  {
+    "front": "Ds",
+    "back": "Darmstadtium",
+    "match": "/^Darmstadtium$/i"
+  },
+  {
+    "front": "Dy",
+    "back": "Dysprosium",
+    "match": "/^Dysprosium$/i"
+  },
+  {
+    "front": "Er",
+    "back": "Erbium",
+    "match": "/^Erbium$/i"
+  },
+  {
+    "front": "Es",
+    "back": "Einsteinium",
+    "match": "/^Einsteinium$/i"
+  },
+  {
+    "front": "Eu",
+    "back": "Europium",
+    "match": "/^Europium$/i"
+  },
+  {
+    "front": "F",
+    "back": "Fluor",
+    "match": "/^Fluor$/i"
+  },
+  {
+    "front": "Fe",
+    "back": "Järn",
+    "match": "/^Järn$/i"
+  },
+  {
+    "front": "Fl",
+    "back": "Flerovium",
+    "match": "/^Flerovium$/i"
+  },
+  {
+    "front": "Fm",
+    "back": "Fermium",
+    "match": "/^Fermium$/i"
+  },
+  {
+    "front": "Fr",
+    "back": "Francium",
+    "match": "/^Francium$/i"
+  },
+  {
+    "front": "Ga",
+    "back": "Gallium",
+    "match": "/^Gallium$/i"
+  },
+  {
+    "front": "Gd",
+    "back": "Gadolinium",
+    "match": "/^Gadolinium$/i"
+  },
+  {
+    "front": "Ge",
+    "back": "Germanium",
+    "match": "/^Germanium$/i"
+  },
+  {
+    "front": "H",
+    "back": "Väte",
+    "match": "/^Väte$/i"
+  },
+  {
+    "front": "He",
+    "back": "Helium",
+    "match": "/^Helium$/i"
+  },
+  {
+    "front": "Hf",
+    "back": "Hafnium",
+    "match": "/^Hafnium$/i"
+  },
+  {
+    "front": "Hg",
+    "back": "Kvicksilver",
+    "match": "/^Kvicksilver$/i"
+  },
+  {
+    "front": "Ho",
+    "back": "Holmium",
+    "match": "/^Holmium$/i"
+  },
+  {
+    "front": "Hs",
+    "back": "Hassium",
+    "match": "/^Hassium$/i"
+  },
+  {
+    "front": "I",
+    "back": "Jod",
+    "match": "/^Jod$/i"
+  },
+  {
+    "front": "In",
+    "back": "Indium",
+    "match": "/^Indium$/i"
+  },
+  {
+    "front": "Ir",
+    "back": "Iridium",
+    "match": "/^Iridium$/i"
+  },
+  {
+    "front": "K",
+    "back": "Kalium",
+    "match": "/^Kalium$/i"
+  },
+  {
+    "front": "Kr",
+    "back": "Krypton",
+    "match": "/^Krypton$/i"
+  },
+  {
+    "front": "La",
+    "back": "Lantan",
+    "match": "/^Lantan$/i"
+  },
+  {
+    "front": "Li",
+    "back": "Litium",
+    "match": "/^Litium$/i"
+  },
+  {
+    "front": "Lr",
+    "back": "Lawrencium",
+    "match": "/^Lawrencium$/i"
+  },
+  {
+    "front": "Lu",
+    "back": "Lutetium",
+    "match": "/^Lutetium$/i"
+  },
+  {
+    "front": "Lv",
+    "back": "Livermorium",
+    "match": "/^Livermorium$/i"
+  },
+  {
+    "front": "Md",
+    "back": "Mendelevium",
+    "match": "/^Mendelevium$/i"
+  },
+  {
+    "front": "Mg",
+    "back": "Magnesium",
+    "match": "/^Magnesium$/i"
+  },
+  {
+    "front": "Mn",
+    "back": "Mangan",
+    "match": "/^Mangan$/i"
+  },
+  {
+    "front": "Mo",
+    "back": "Molybden",
+    "match": "/^Molybden$/i"
+  },
+  {
+    "front": "Mt",
+    "back": "Meitnerium",
+    "match": "/^Meitnerium$/i"
+  },
+  {
+    "front": "N",
+    "back": "Kväve",
+    "match": "/^Kväve$/i"
+  },
+  {
+    "front": "Na",
+    "back": "Natrium",
+    "match": "/^Natrium$/i"
+  },
+  {
+    "front": "Nb",
+    "back": "Niob",
+    "match": "/^Niob$/i"
+  },
+  {
+    "front": "Nd",
+    "back": "Neodym",
+    "match": "/^Neodym$/i"
+  },
+  {
+    "front": "Ne",
+    "back": "Neon",
+    "match": "/^Neon$/i"
+  },
+  {
+    "front": "Ni",
+    "back": "Nickel",
+    "match": "/^Nickel$/i"
+  },
+  {
+    "front": "No",
+    "back": "Nobelium",
+    "match": "/^Nobelium$/i"
+  },
+  {
+    "front": "Np",
+    "back": "Neptunium",
+    "match": "/^Neptunium$/i"
+  },
+  {
+    "front": "O",
+    "back": "Syre",
+    "match": "/^Syre$/i"
+  },
+  {
+    "front": "Os",
+    "back": "Osmium",
+    "match": "/^Osmium$/i"
+  },
+  {
+    "front": "P",
+    "back": "Fosfor",
+    "match": "/^Fosfor$/i"
+  },
+  {
+    "front": "Pa",
+    "back": "Protaktinium",
+    "match": "/^Protaktinium$/i"
+  },
+  {
+    "front": "Pb",
+    "back": "Bly",
+    "match": "/^Bly$/i"
+  },
+  {
+    "front": "Pd",
+    "back": "Palladium",
+    "match": "/^Palladium$/i"
+  },
+  {
+    "front": "Pm",
+    "back": "Prometium",
+    "match": "/^Prometium$/i"
+  },
+  {
+    "front": "Po",
+    "back": "Polonium",
+    "match": "/^Polonium$/i"
+  },
+  {
+    "front": "Pr",
+    "back": "Praseodym",
+    "match": "/^Praseodym$/i"
+  },
+  {
+    "front": "Pt",
+    "back": "Platina",
+    "match": "/^Platina$/i"
+  },
+  {
+    "front": "Pu",
+    "back": "Plutonium",
+    "match": "/^Plutonium$/i"
+  },
+  {
+    "front": "Ra",
+    "back": "Radium",
+    "match": "/^Radium$/i"
+  },
+  {
+    "front": "Rb",
+    "back": "Rubidium",
+    "match": "/^Rubidium$/i"
+  },
+  {
+    "front": "Re",
+    "back": "Rhenium",
+    "match": "/^Rhenium$/i"
+  },
+  {
+    "front": "Rf",
+    "back": "Rutherfordium",
+    "match": "/^Rutherfordium$/i"
+  },
+  {
+    "front": "Rg",
+    "back": "Röntgenium",
+    "match": "/^Röntgenium$/i"
+  },
+  {
+    "front": "Rh",
+    "back": "Rodium",
+    "match": "/^Rodium$/i"
+  },
+  {
+    "front": "Rn",
+    "back": "Radon",
+    "match": "/^Radon$/i"
+  },
+  {
+    "front": "Ru",
+    "back": "Rutenium",
+    "match": "/^Rutenium$/i"
+  },
+  {
+    "front": "S",
+    "back": "Svavel",
+    "match": "/^Svavel$/i"
+  },
+  {
+    "front": "Sb",
+    "back": "Antimon",
+    "match": "/^Antimon$/i"
+  },
+  {
+    "front": "Sc",
+    "back": "Skandium",
+    "match": "/^Skandium$/i"
+  },
+  {
+    "front": "Se",
+    "back": "Selen",
+    "match": "/^Selen$/i"
+  },
+  {
+    "front": "Sg",
+    "back": "Seaborgium",
+    "match": "/^Seaborgium$/i"
+  },
+  {
+    "front": "Si",
+    "back": "Kisel",
+    "match": "/^Kisel$/i"
+  },
+  {
+    "front": "Sm",
+    "back": "Samarium",
+    "match": "/^Samarium$/i"
+  },
+  {
+    "front": "Sn",
+    "back": "Tenn",
+    "match": "/^Tenn$/i"
+  },
+  {
+    "front": "Sr",
+    "back": "Strontium",
+    "match": "/^Strontium$/i"
+  },
+  {
+    "front": "Ta",
+    "back": "Tantal",
+    "match": "/^Tantal$/i"
+  },
+  {
+    "front": "Tb",
+    "back": "Terbium",
+    "match": "/^Terbium$/i"
+  },
+  {
+    "front": "Tc",
+    "back": "Teknetium",
+    "match": "/^Teknetium$/i"
+  },
+  {
+    "front": "Te",
+    "back": "Tellur",
+    "match": "/^Tellur$/i"
+  },
+  {
+    "front": "Th",
+    "back": "Torium",
+    "match": "/^Torium$/i"
+  },
+  {
+    "front": "Ti",
+    "back": "Titan",
+    "match": "/^Titan$/i"
+  },
+  {
+    "front": "Tl",
+    "back": "Tallium",
+    "match": "/^Tallium$/i"
+  },
+  {
+    "front": "Tm",
+    "back": "Tulium",
+    "match": "/^Tulium$/i"
+  },
+  {
+    "front": "U",
+    "back": "Uran",
+    "match": "/^Uran$/i"
+  },
+  {
+    "front": "Uuo",
+    "back": "Ununoktium",
+    "match": "/^Ununoktium$/i"
+  },
+  {
+    "front": "Uup",
+    "back": "Ununpentium",
+    "match": "/^Ununpentium$/i"
+  },
+  {
+    "front": "Uus",
+    "back": "Ununseptium",
+    "match": "/^Ununseptium$/i"
+  },
+  {
+    "front": "Uut",
+    "back": "Ununtrium",
+    "match": "/^Ununtrium$/i"
+  },
+  {
+    "front": "V",
+    "back": "Vanadin",
+    "match": "/^Vanadin$/i"
+  },
+  {
+    "front": "W",
+    "back": "Volfram",
+    "match": "/^Volfram$/i"
+  },
+  {
+    "front": "Xe",
+    "back": "Xenon",
+    "match": "/^Xenon$/i"
+  },
+  {
+    "front": "Y",
+    "back": "Yttrium",
+    "match": "/^Yttrium$/i"
+  },
+  {
+    "front": "Yb",
+    "back": "Ytterbium",
+    "match": "/^Ytterbium$/i"
+  },
+  {
+    "front": "Zn",
+    "back": "Zink",
+    "match": "/^Zink$/i"
+  },
+  {
+    "front": "Zr",
+    "back": "Zirkonium",
+    "match": "/^Zirkonium$/i"
+  }
+]
