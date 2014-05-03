@@ -3,6 +3,15 @@
 module Gaku
   class Config
     attr_accessor :deck_root, :initial_distance
+    attr_writer :monochrome, :utf8
+
+    def monochrome?
+      !!@monochrome
+    end
+
+    def utf8?
+      !!@utf8
+    end
 
     CONFIG_FILE = File.expand_path("#{Dir.home}/.gaku")
 
@@ -20,6 +29,8 @@ module Gaku
     def set_defaults
       @deck_root = File.expand_path(Dir.pwd)
       @initial_distance = 8
+      @monochrome = false
+      @utf8 = true
     end
 
     def gaku
