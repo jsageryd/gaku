@@ -10,7 +10,9 @@ module Gaku
       set_defaults
       begin
         instance_eval(File.read(CONFIG_FILE)) if File.exists?(CONFIG_FILE)
-      rescue StandardError
+      rescue ConfigError
+        raise
+      rescue StandardError => e
         raise ConfigError, "Configuration is broken (#{CONFIG_FILE})"
       end
     end
