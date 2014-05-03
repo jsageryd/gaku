@@ -2,6 +2,7 @@
 
 require 'gaku/chatter'
 require 'gaku/cli'
+require 'gaku/colouring'
 require 'gaku/config'
 require 'gaku/croupier'
 require 'gaku/deck'

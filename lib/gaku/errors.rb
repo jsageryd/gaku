@@ -7,4 +7,5 @@ module Gaku
   class InvalidOption < GakuError; end
   class InvalidOptionUsage < GakuError; end
   class ConfigError < GakuError; end
+  class InvalidColour < GakuError; end
 end
