@@ -40,21 +40,7 @@ module Gaku
 
     def print_goodbye
       puts
-      puts [
-        'All right then o/',
-        'Another time then o/',
-        'Catch you later o/',
-        'Come back soon o/',
-        'Farewell o/',
-        'Good bye o/',
-        'Miss you already o/',
-        'Peace out o/',
-        'See you soon o/',
-        'So long o/',
-        'Take care o/',
-        'Tata o/',
-        'Todilo o/'
-      ].sample
+      puts Chatter.farewell
     end
 
     def print_decks(id_prefix=true)
