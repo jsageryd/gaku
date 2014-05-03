@@ -44,7 +44,7 @@ module Gaku
     # Returns a hash with statistics
     def stats
       stats = {
-        card_count: @deck.count,
+        card_count: @deck.length,
         seen_count: @deck.count { |c| c.key?(:last_seen) },
         known_count: @deck.count { |c| c[:known] },
         unknown_count: @deck.count { |c| c[:known] == false }
