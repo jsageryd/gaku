@@ -5,18 +5,22 @@ module Gaku
     def initialize(argv)
       Signal.trap('SIGINT') { quit }
       @options = Options.new(argv).options
-      @options[:stats] and raise 'Stats not implemented'
       @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
-      @input = Input.new
-      @input.on_quit { quit }
       deck_name = @options[:deck] ? @options[:deck][:argument] : nil
-      deck_name ||= ask_for_deck
-      @croupier = Croupier.new(deck_name)
-      @canvas.puts
-      @canvas.puts("Deck '#{@croupier.deck.name}' loaded.")
-      @canvas.puts
-      quiz
+      if @options[:stats]
+        decks = deck_name ? [Croupier.new(deck_name).deck] : Croupier.deck_names.map { |d| Croupier.new(d).deck }
+        print_stats(decks)
+      else
+        @input = Input.new
+        @input.on_quit { quit }
+        deck_name ||= ask_for_deck
+        @croupier = Croupier.new(deck_name)
+        @canvas.puts
+        print_deck_info(@croupier.deck)
+        @canvas.puts
+        quiz
+      end
     end
 
     private
@@ -32,9 +36,30 @@ module Gaku
       @canvas.puts
     end
 
-    def print_goodbye
-      @canvas.puts
-      @canvas.puts(Chatter.farewell)
+    def print_stats(decks)
+      decks.each do |deck|
+        print_deck_info(deck)
+        @canvas.puts
+      end
+    end
+
+    def print_deck_info(deck)
+      s = deck.stats
+      pb = BarChart.new(
+        [s[:known_count], s[:unknown_count], s[:unseen_count]],
+        [:green, :red, :bright_black],
+        30,
+        @canvas.monochrome?,
+        @canvas.utf8? ? '▊' : '#'
+      )
+      @canvas.puts("#{deck.name}")
+      @canvas.print(pb.to_s)
+      values = [
+        (s[:known_count] * 100) / s[:card_count].to_f,
+        s[:known_count],
+        s[:card_count]
+      ]
+      @canvas.puts(' %.0f%% [%d/%d]' % values)
     end
 
     def print_decks(id_prefix=true)
