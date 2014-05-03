@@ -3,6 +3,7 @@
 module Gaku
   class CLI
     def initialize(argv)
+      Signal.trap('SIGINT') { quit }
       @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
       @input = Input.new
@@ -108,9 +109,6 @@ module Gaku
         end
       end
       deck
-    rescue Interrupt
-      print_goodbye
-      exit 0
     end
 
     def ask_for_match(pattern)
@@ -124,9 +122,6 @@ module Gaku
         # Pattern is a plain string
         input == pattern
       end
-    rescue Interrupt
-      print_goodbye
-      exit 0
     end
 
     def ask_if_known
@@ -140,9 +135,6 @@ module Gaku
         end
       end
       known
-    rescue Interrupt
-      print_goodbye
-      exit 0
     end
   end
 end
