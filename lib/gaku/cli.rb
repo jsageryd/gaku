@@ -5,6 +5,8 @@ module Gaku
     def initialize(argv)
       @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
+      @input = Input.new
+      @input.on_quit { quit }
       if argv.empty?
         @deck = ask_for_deck
         @canvas.puts("Deck '#{@deck.name}' loaded.")
@@ -27,6 +29,12 @@ module Gaku
     end
 
     private
+
+    def quit
+      @canvas.puts
+      @canvas.puts(Chatter.farewell)
+      exit
+    end
 
     def print_banner
       @canvas.puts('Gaku %s' % [Gaku::VERSION])
@@ -91,11 +99,8 @@ module Gaku
       print_decks
       deck = nil
       while deck.nil?
-        @canvas.print('> ')
         begin
-          id = gets
-          raise Interrupt if id.nil?
-          id.strip!
+          id = @input.gets('> ').strip
           next unless id =~ /^\d+$/ && (0...Croupier.decks.length).cover?(id.to_i)
           deck = Croupier.load_deck(Croupier.decks[id.to_i])
         rescue InvalidDeck
@@ -109,10 +114,7 @@ module Gaku
     end
 
     def ask_for_match(pattern)
-      @canvas.print('> ')
-      input = gets
-      raise Interrupt if input.nil?
-      input.strip!
+      input = @input.gets('> ').strip
       if pattern =~ /^\/.*\/i?$/
         # Pattern is a regex
         regexp_str, options_str = pattern.match(/^\/(.*)\/(.*)$/)[1, 2]
@@ -130,9 +132,7 @@ module Gaku
     def ask_if_known
       known = nil
       while known.nil?
-        @canvas.print('Do you know this [y/n]? ')
-        input = gets
-        raise Interrupt if input.nil?
+        input = @input.gets('Do you know this [y/n]? ')
         case input.strip.downcase
         when 'y', 'yes' then known = true
         when 'n', 'no'  then known = false
