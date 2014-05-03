@@ -5,4 +5,9 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'gaku'
 
-Gaku::CLI.new(ARGV)
+begin
+  Gaku::CLI.new(ARGV)
+rescue StandardError => e
+  puts e.message
+  puts Gaku::Chatter.death
+end
