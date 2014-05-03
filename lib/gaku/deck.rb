@@ -30,6 +30,14 @@ module Gaku
       @deck.length
     end
 
+    def modified?
+      !!@modified
+    end
+
+    def set_unmodified
+      @modified = false
+    end
+
     # Returns the first card
     def first_card
       Card.new(@deck.first)
@@ -38,6 +46,7 @@ module Gaku
     # Moves the first card down +distance+ places
     def move_first(distance)
       distance > 0 or raise ArgumentError, 'Distance must be > 0'
+      @modified = true
       @deck.insert([distance - 1, length - 1].min, @deck.shift)
     end
 
