@@ -3,12 +3,6 @@
 module Gaku
   class CLI
     def initialize(argv)
-      begin
-        @config = Config.new
-      rescue GakuError => e
-        puts e.message
-        exit 1
-      end
       print_banner
       if argv.empty?
         @deck = ask_for_deck
@@ -67,7 +61,7 @@ module Gaku
         end
         card[:last_known] = now.to_i if known
         card[:known] = known
-        distance = card.fetch(:distance, @config.initial_distance)
+        distance = card.fetch(:distance, CONF.initial_distance)
         card[:distance] = known ? distance * 2 : distance / 2
         card[:distance] = 1 if card[:distance] < 1
         card[:distance] = 2 ** Math.log2(deck.length).ceil if card[:distance] > deck.length
