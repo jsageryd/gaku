@@ -32,7 +32,7 @@ module Gaku
 
     # Returns the first card
     def first_card
-      @deck.first
+      Card.new(@deck.first)
     end
 
     # Moves the first card down +distance+ places
@@ -45,7 +45,7 @@ module Gaku
     def stats
       stats = {
         card_count: @deck.count,
-        seen_count: @deck.count { |c| c.has_key?(:last_seen) },
+        seen_count: @deck.count { |c| c.key?(:last_seen) },
         known_count: @deck.count { |c| c[:known] },
         unknown_count: @deck.count { |c| c[:known] == false }
       }

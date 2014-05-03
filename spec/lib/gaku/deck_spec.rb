@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'gaku/deck'
+require 'gaku/card'
 require 'json'
 
 describe Gaku::Deck do
@@ -56,7 +57,7 @@ describe Gaku::Deck do
 
   describe '#first_card' do
     it 'returns the first card' do
-      expect(subject.first_card).to eq(test_deck.first)
+      expect(subject.first_card.to_hash).to eq(test_deck.first)
     end
   end
 

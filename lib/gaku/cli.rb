@@ -62,7 +62,7 @@ module Gaku
         card = deck.first_card
         card[:last_seen] = now.to_i
         @canvas.puts(card[:front])
-        if card.has_key?(:match)
+        if card.key?(:match)
           known = ask_for_match(card[:match])
           @canvas.print(known ? 'Correct. ' : 'Incorrect. ')
         else
@@ -81,7 +81,7 @@ module Gaku
           @canvas.puts
           @canvas.puts(card[:back])
           @canvas.puts
-          if card.has_key?(:match)
+          if card.key?(:match)
             until ask_for_match(card[:match])
               next
             end
