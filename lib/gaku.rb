@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+require 'gaku/canvas'
 require 'gaku/chatter'
 require 'gaku/cli'
 require 'gaku/colouring'

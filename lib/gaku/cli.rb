@@ -3,21 +3,22 @@
 module Gaku
   class CLI
     def initialize(argv)
+      @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
       if argv.empty?
         @deck = ask_for_deck
-        puts "Deck '#{@deck.name}' loaded."
-        puts
+        @canvas.puts("Deck '#{@deck.name}' loaded.")
+        @canvas.puts
       else
         deck_name = argv.shift
         argv.clear
         if Croupier.decks.include?(deck_name)
           @deck = Croupier.load_deck(deck_name)
-          puts "Deck '#{@deck.name}' loaded."
-          puts
+          @canvas.puts("Deck '#{@deck.name}' loaded.")
+          @canvas.puts
         else
-          puts "Invalid deck '#{deck_name}'"
-          puts 'Available decks: '
+          @canvas.puts("Invalid deck '#{deck_name}'")
+          @canvas.puts('Available decks: ')
           print_decks(false)
           exit 1
         end
@@ -28,21 +29,21 @@ module Gaku
     private
 
     def print_banner
-      puts 'Gaku %s' % [Gaku::VERSION]
-      puts
+      @canvas.puts('Gaku %s' % [Gaku::VERSION])
+      @canvas.puts
     end
 
     def print_goodbye
-      puts
-      puts Chatter.farewell
+      @canvas.puts
+      @canvas.puts(Chatter.farewell)
     end
 
     def print_decks(id_prefix=true)
       Croupier.decks.each_with_index do |d, i|
         if id_prefix
-          puts '  %d) %s' % [i, d]
+          @canvas.puts('  %d) %s' % [i, d])
         else
-          puts '  %s' % [d]
+          @canvas.puts('  %s' % [d])
         end
       end
     end
@@ -52,10 +53,10 @@ module Gaku
         now = Time.now
         card = deck.first_card
         card[:last_seen] = now.to_i
-        puts card[:front]
+        @canvas.puts(card[:front])
         if card.has_key?(:match)
           known = ask_for_match(card[:match])
-          print known ? 'Correct. ' : 'Incorrect. '
+          @canvas.print(known ? 'Correct. ' : 'Incorrect. ')
         else
           known = ask_if_known
         end
@@ -65,19 +66,19 @@ module Gaku
         card[:distance] = known ? distance * 2 : distance / 2
         card[:distance] = 1 if card[:distance] < 1
         card[:distance] = 2 ** Math.log2(deck.length).ceil if card[:distance] > deck.length
-        puts "Moving down #{card[:distance]} place#{card[:distance] > 1 ? 's' : ''}."
-        puts
+        @canvas.puts("Moving down #{card[:distance]} place#{card[:distance] > 1 ? 's' : ''}.")
+        @canvas.puts
         if not known
-          puts card[:front]
-          puts
-          puts card[:back]
-          puts
+          @canvas.puts(card[:front])
+          @canvas.puts
+          @canvas.puts(card[:back])
+          @canvas.puts
           if card.has_key?(:match)
             until ask_for_match(card[:match])
               next
             end
-            puts "Correct."
-            puts
+            @canvas.puts("Correct.")
+            @canvas.puts
           end
         end
         deck.move_first(card[:distance])
@@ -86,11 +87,11 @@ module Gaku
     end
 
     def ask_for_deck
-      puts 'Pick a deck:'
+      @canvas.puts('Pick a deck:')
       print_decks
       deck = nil
       while deck.nil?
-        print '> '
+        @canvas.print('> ')
         begin
           id = gets
           raise Interrupt if id.nil?
@@ -98,7 +99,7 @@ module Gaku
           next unless id =~ /^\d+$/ && (0...Croupier.decks.length).cover?(id.to_i)
           deck = Croupier.load_deck(Croupier.decks[id.to_i])
         rescue InvalidDeck
-          puts 'Invalid deck'
+          @canvas.puts('Invalid deck')
         end
       end
       deck
@@ -108,7 +109,7 @@ module Gaku
     end
 
     def ask_for_match(pattern)
-      print '> '
+      @canvas.print('> ')
       input = gets
       raise Interrupt if input.nil?
       input.strip!
@@ -129,13 +130,13 @@ module Gaku
     def ask_if_known
       known = nil
       while known.nil?
-        print 'Do you know this [y/n]? '
+        @canvas.print('Do you know this [y/n]? ')
         input = gets
         raise Interrupt if input.nil?
         case input.strip.downcase
         when 'y', 'yes' then known = true
         when 'n', 'no'  then known = false
-        else puts 'Please say yes or no.'
+        else @canvas.puts('Please say yes or no.')
         end
       end
       known
