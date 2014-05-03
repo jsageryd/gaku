@@ -72,6 +72,15 @@ module Gaku
       end
     end
 
+    def print_victory
+      @canvas.puts
+      victory_message = Chatter.victory
+      @canvas.puts('-' * (victory_message.length + 2), :yellow)
+      @canvas.puts(' ' << victory_message << ' ', :bright_yellow)
+      @canvas.puts('-' * (victory_message.length + 2), :yellow)
+      @victory_announced = true
+    end
+
     def quiz
       loop do
         card = @croupier.card
@@ -87,6 +96,8 @@ module Gaku
           if card.key?(:match)
             answer = ask_for_string until @croupier.known?(card, answer)
           end
+        else
+          print_victory if !@victory_announced && @croupier.deck.all_known?
         end
         @canvas.puts
       end

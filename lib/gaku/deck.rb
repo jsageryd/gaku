@@ -62,6 +62,10 @@ module Gaku
       stats
     end
 
+    def all_known?
+      @deck.length == @deck.count { |c| c[:known] }
+    end
+
     private
 
     def read_deck(io)

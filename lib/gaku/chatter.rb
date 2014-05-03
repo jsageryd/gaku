@@ -35,6 +35,10 @@ module Gaku
       'Why not? Yeah.'
     ]
 
+    VICTORY = [
+      '\(^o^)/ You seem to know ALL cards.'
+    ]
+
     class << self
       def method_missing(name)
         const_get(name.upcase).sample
