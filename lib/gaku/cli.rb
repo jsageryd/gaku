@@ -11,21 +11,12 @@ module Gaku
       @input = Input.new
       @input.on_quit { quit }
       deck_name = @options[:deck] ? @options[:deck][:argument] : nil
-      if deck_name.nil?
-        @deck = ask_for_deck
-      else
-        if Croupier.decks.include?(deck_name)
-          @deck = Croupier.load_deck(deck_name)
-        else
-          @canvas.puts("Invalid deck '#{deck_name}'")
-          @canvas.puts('Available decks: ')
-          print_decks(false)
-          exit 1
-        end
-      end
-      @canvas.puts("Deck '#{@deck.name}' loaded.")
+      deck_name ||= ask_for_deck
+      @croupier = Croupier.new(deck_name)
       @canvas.puts
-      quiz(@deck)
+      @canvas.puts("Deck '#{@croupier.deck.name}' loaded.")
+      @canvas.puts
+      quiz
     end
 
     private
@@ -47,7 +38,7 @@ module Gaku
     end
 
     def print_decks(id_prefix=true)
-      Croupier.decks.each_with_index do |d, i|
+      Croupier.deck_names.each_with_index do |d, i|
         if id_prefix
           @canvas.puts('  %d) %s' % [i, d])
         else
@@ -56,84 +47,55 @@ module Gaku
       end
     end
 
-    def quiz(deck)
+    def quiz
       loop do
-        now = Time.now
-        card = deck.first_card
-        card[:last_seen] = now.to_i
-        @canvas.puts(card[:front])
+        card = @croupier.card
+        card.print(:front, @canvas)
         if card.key?(:match)
-          known = ask_for_match(card[:match])
-          @canvas.print(known ? 'Correct. ' : 'Incorrect. ')
+          answer = ask_for_string
         else
-          known = ask_if_known
+          answer = ask_if_known
         end
-        card[:last_known] = now.to_i if known
-        card[:known] = known
-        distance = card.fetch(:distance, CONF.initial_distance)
-        card[:distance] = known ? distance * 2 : distance / 2
-        card[:distance] = 1 if card[:distance] < 1
-        card[:distance] = 2 ** Math.log2(deck.length).ceil if card[:distance] > deck.length
-        @canvas.puts("Moving down #{card[:distance]} place#{card[:distance] > 1 ? 's' : ''}.")
-        @canvas.puts
-        if not known
-          @canvas.puts(card[:front])
-          @canvas.puts
-          @canvas.puts(card[:back])
-          @canvas.puts
+        known = @croupier.answer(answer)
+        if !known
+          card.print(:back, @canvas)
           if card.key?(:match)
-            until ask_for_match(card[:match])
-              next
-            end
-            @canvas.puts("Correct.")
-            @canvas.puts
+            answer = ask_for_string until @croupier.known?(card, answer)
           end
         end
-        deck.move_first(card[:distance])
-        Croupier.save_deck(deck)
+        @canvas.puts
       end
     end
 
     def ask_for_deck
       @canvas.puts('Pick a deck:')
       print_decks
-      deck = nil
-      while deck.nil?
-        begin
-          id = @input.gets('> ').strip
-          next unless id =~ /^\d+$/ && (0...Croupier.decks.length).cover?(id.to_i)
-          deck = Croupier.load_deck(Croupier.decks[id.to_i])
-        rescue InvalidDeck
-          @canvas.puts('Invalid deck')
-        end
+      id = nil
+      until id =~ /^\d+$/ && (0...Croupier.deck_names.length).cover?(id.to_i)
+        id = ask_for_string
       end
-      deck
+      Croupier.deck_names[id.to_i]
     end
 
-    def ask_for_match(pattern)
-      input = @input.gets('> ').strip
-      if pattern =~ /^\/.*\/i?$/
-        # Pattern is a regex
-        regexp_str, options_str = pattern.match(/^\/(.*)\/(.*)$/)[1, 2]
-        options = options_str == 'i' ? Regexp::IGNORECASE : nil
-        !!(input.strip =~ Regexp.new(regexp_str, options))
+    def ask_for_string
+      if CONF.monochrome?
+        @input.gets('> ')
       else
-        # Pattern is a plain string
-        input == pattern
+        @c = Colouring.new
+        @input.gets(@c[:bright_black] << '> ' << @c[:reset])
       end
     end
 
     def ask_if_known
-      known = nil
-      while known.nil?
-        input = @input.gets('Do you know this [y/n]? ')
-        case input.strip.downcase
-        when 'y', 'yes' then known = true
-        when 'n', 'no'  then known = false
+      answer = nil
+      while answer.nil?
+        case @input.gets('Known [y/n]? ').strip.downcase
+        when 'y', 'yes' then answer = true
+        when 'n', 'no'  then answer = false
         else @canvas.puts('Please say yes or no.')
         end
       end
-      known
+      answer
     end
   end
 end
