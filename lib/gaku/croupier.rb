@@ -35,6 +35,7 @@ module Gaku
     def answer(answer)
       c = card
       now = Time.now.to_i
+      c[:first_seen] ||= now
       c[:last_seen] = now
       distance = c.fetch(:distance, CONF.initial_distance)
       if known = known?(c, answer)
