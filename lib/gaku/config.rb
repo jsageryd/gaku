@@ -10,7 +10,7 @@ module Gaku
     def initialize
       set_defaults
       begin
-        instance_eval(File.read(CONFIG_FILE)) if File.exists?(CONFIG_FILE)
+        instance_eval(File.read(CONFIG_FILE)) if File.file?(CONFIG_FILE)
       rescue ConfigError
         raise
       rescue StandardError => e
