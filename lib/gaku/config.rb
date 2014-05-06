@@ -20,6 +20,7 @@ module Gaku
     end
 
     CONFIG_FILES = [
+      File.expand_path(File.dirname(File.realdirpath(__FILE__)) + '/../../.gaku'),
       File.expand_path('/etc/gaku'),
       XDG_CONFIG_DIRS.map { |d| File.expand_path("#{d}/gaku") },
       File.expand_path("#{Dir.home}/.gaku"),
