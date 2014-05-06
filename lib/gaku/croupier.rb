@@ -37,6 +37,8 @@ module Gaku
       now = Time.now.to_i
       c[:first_seen] ||= now
       c[:last_seen] = now
+      c[:seen_count] ||= 0
+      c[:seen_count] += 1
       distance = c.fetch(:distance, CONF.initial_distance)
       if known = known?(c, answer)
         c[:last_known] = now
