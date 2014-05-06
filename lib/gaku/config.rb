@@ -60,8 +60,12 @@ module Gaku
       @instance ||= self
     end
 
-    def method_missing(name, _)
-      raise ConfigError, "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{@c})"
+    def method_missing(name, _=nil)
+      if name =~ /=$/
+        raise ConfigError, "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{@c})"
+      else
+        raise ConfigError, "What is '#{name}' supposed to mean? (#{@c})"
+      end
     end
   end
 end
