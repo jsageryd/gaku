@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+require 'gaku/utils'
 require 'gaku/bar_chart'
 require 'gaku/canvas'
 require 'gaku/card'

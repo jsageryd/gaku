@@ -9,16 +9,10 @@ module Gaku
 
       def deck_paths
         @deck_paths ||= Hash[
-          Dir["#{remove_trailing_slash(File.expand_path(CONF.deck_root))}/*.deck"].map do |path|
+          Dir["#{Gaku::Utils::remove_trailing_slash(File.expand_path(CONF.deck_root))}/*.deck"].map do |path|
             [path[/([^\/]+).deck$/, 1], File.expand_path(path)]
           end
         ]
-      end
-
-      private
-
-      def remove_trailing_slash(path)
-        path.sub(/\/+$/, '')
       end
     end
 

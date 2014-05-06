@@ -5,16 +5,38 @@ module Gaku
     attr_accessor :deck_root, :initial_distance
     attr_writer :monochrome, :utf8
 
-    CONFIG_FILE = File.expand_path("#{Dir.home}/.gaku")
+    if !ENV['XDG_CONFIG_DIRS'].to_s.empty?
+      XDG_CONFIG_DIRS = (ENV['XDG_CONFIG_DIRS'].to_s).split(':').reverse.map do |d|
+        Gaku::Utils::remove_trailing_slash(d)
+      end
+    else
+      XDG_CONFIG_DIRS = ['/etc/xdg']
+    end
+
+    if !ENV['XDG_CONFIG_HOME'].to_s.empty?
+      XDG_CONFIG_HOME = Gaku::Utils::remove_trailing_slash(ENV['XDG_CONFIG_HOME'].to_s)
+    else
+      XDG_CONFIG_HOME = "#{Dir.home}/.config"
+    end
+
+    CONFIG_FILES = [
+      File.expand_path('/etc/gaku'),
+      XDG_CONFIG_DIRS.map { |d| File.expand_path("#{d}/gaku") },
+      File.expand_path("#{Dir.home}/.gaku"),
+      File.expand_path("#{XDG_CONFIG_HOME}/gaku"),
+    ].flatten
 
     def initialize
       set_defaults
-      begin
-        instance_eval(File.read(CONFIG_FILE)) if File.file?(CONFIG_FILE)
-      rescue ConfigError
-        raise
-      rescue StandardError => e
-        raise ConfigError, "Configuration is broken (#{CONFIG_FILE})"
+      CONFIG_FILES.each do |c|
+        @c = c
+        begin
+          instance_eval(File.read(@c)) if File.file?(@c)
+        rescue ConfigError
+          raise
+        rescue StandardError => e
+          raise ConfigError, "Configuration is broken (#{@c})"
+        end
       end
     end
 
@@ -38,7 +60,7 @@ module Gaku
     end
 
     def method_missing(name, _)
-      raise ConfigError, "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{CONFIG_FILE})"
+      raise ConfigError, "Invalid configuration key 'gaku.#{name[/(.*)=$/, 1]}' (#{@c})"
     end
   end
 end
