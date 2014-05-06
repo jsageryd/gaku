@@ -5,6 +5,9 @@ module Gaku
     def initialize(argv)
       Signal.trap('SIGINT') { quit }
       @options = Options.new(argv).options
+      if Croupier.deck_names.empty?
+        raise ConfigError, "No decks found in '#{CONF.deck_root}'.\nPlease set gaku.deck_root to a directory containing at least one deck."
+      end
       @canvas = Canvas.new(CONF.monochrome?, CONF.utf8?)
       print_banner
       deck_name = @options[:deck] ? @options[:deck][:argument] : nil
