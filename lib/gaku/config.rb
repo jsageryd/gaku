@@ -34,8 +34,8 @@ module Gaku
           instance_eval(File.read(@c)) if File.file?(@c)
         rescue ConfigError
           raise
-        rescue StandardError => e
-          raise ConfigError, "Configuration is broken (#{@c})"
+        rescue StandardError, ScriptError => e
+          raise ConfigError, "Configuration is broken (#{@c})\n#{e.message.each_line.map { |l| "  #{l}" }.join}"
         end
       end
     end
