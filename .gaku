@@ -6,7 +6,7 @@
 gaku.deck_root = '.'
 
 # Distance to set for a card seen for the first time
-gaku.initial_distance = 4
+gaku.initial_distance = 8
 
 # Set to true for a monochrome experience
 gaku.monochrome = false
