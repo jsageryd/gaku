@@ -3,6 +3,10 @@
  * The remaining 1,130 kanji are ordered by grade (field [G]) and frequency
  * (field [F]) as found in KANJIDIC.
  *
+ * This file in its entirety is released under CC-BY 2.0
+ * http://creativecommons.org/licenses/by/2.0/ in accordance with the Tatoeba
+ * project http://tatoeba.org/eng/terms_of_use.
+ *
  * The deck has been compiled using:
  *
  * - Lists of kanji with readings and word examples from the Japanese Ministry
@@ -12,8 +16,7 @@
  *   http://www.csse.monash.edu.au/~jwb/kanjidic.html
  *
  * - Example sentences from the Tatoeba project http://tatoeba.org/, filtered
- *   and sorted by Charles Kelly http://www.manythings.org/anki/, released under
- *   the CC-BY licence http://creativecommons.org/licenses/by/2.0/
+ *   and sorted by Charles Kelly http://www.manythings.org/anki/
  */
 [
   {
