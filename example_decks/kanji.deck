@@ -1,4 +1,7 @@
-/* This deck contains all 2136 jōyō kanji, ordered by school grade and frequency.
+/* This deck contains all 2,136 jōyō kanji, ordered by school grade and frequency.
+ * The first 1,006 kanji are ordered according to the official Kyōiku kanji list.
+ * The remaining 1,130 kanji are ordered by grade (field [G]) and frequency
+ * (field [F]) as found in KANJIDIC.
  *
  * The deck has been compiled using:
  *
