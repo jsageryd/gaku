@@ -1,9 +1,15 @@
 /* This deck contains all 2136 jōyō kanji, ordered by school grade and frequency.
  *
  * The deck has been compiled using:
- * - Lists of kanji with readings and word examples from the Japanese Ministry of Education, 文部科学省 http://www.mext.go.jp/
- * - English meanings and meta data from the KANJIDIC project http://www.csse.monash.edu.au/~jwb/kanjidic.html
- * - Example sentences from the Tatoeba project http://tatoeba.org/, filtered and sorted by Charles Kelly http://www.manythings.org/anki/
+ *
+ * - Lists of kanji with readings and word examples from the Japanese Ministry
+ *   of Education, 文部科学省 http://www.mext.go.jp/
+ *
+ * - English meanings and meta data from the KANJIDIC project
+ *   http://www.csse.monash.edu.au/~jwb/kanjidic.html
+ *
+ * - Example sentences from the Tatoeba project http://tatoeba.org/, filtered
+ *   and sorted by Charles Kelly http://www.manythings.org/anki/
  */
 [
   {
