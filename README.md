@@ -111,7 +111,7 @@ earlier is overridden by files loaded later.
     $
 
 ## Licence
-Copyright (c) 2014 Johan Sageryd <j@1616.se>
+Copyright (c) 2014-2015 Johan Sageryd <j@1616.se>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
