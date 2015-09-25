@@ -3,6 +3,21 @@
 Gaku is an experimental
 [SRS](https://en.wikipedia.org/wiki/Spaced_repetition#Software).
 
+## Algorithm
+The algorithm used by this SRS is simple and works like this:
+
+1. Present the top-most card of the deck
+2. If card is:
+     - Known: Move it down the deck to 2x of the distance it was last moved
+     - Well known: Move it down the deck to 8x of the distance it was last moved
+     - Not known: Move it down the deck to 0.5x of the distance it was last moved
+3. Go to 1
+
+If a card has not been seen before and therefore has never been moved, the
+initial distance as set in config will be used. By default, the initial distance
+of a card is 8, meaning that a known card will be moved down 16 places and an
+unknown card will be moved down 4 places after its first appearance.
+
 ## Installation
 1. Clone this repo.
 2. Set your `$PATH` so that `bin/gaku` is accessible (or just run it from
@@ -20,7 +35,17 @@ Gaku is an experimental
 4. If card is not known, the back of the card will be presented.
 5. Go to 3.
 
-## Answer-matching mode
+## Answers
+Depending on the type of card, there are two answer modes. One is a boolean
+answer to "Do you know this?", the other is one matched to the definition on
+the card.
+
+In both modes, 'w' or 'well' may be given. This is to signify that the card is
+well-known and that it is to be sent down further than if it is just 'known'.
+This is to avoid that cards which do not require drilling get in the way of
+more relevant cards.
+
+### Answer-matching mode
 If a card in the deck has a `match` key, a typed out answer will be asked for
 and matched against the value of the key. If the string starts and ends with
 `/`, it will be treated as a regex. Regex option `i` may be specified to ignore
