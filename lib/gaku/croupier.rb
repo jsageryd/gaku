@@ -34,7 +34,11 @@ module Gaku
       c[:seen_count] ||= 0
       c[:seen_count] += 1
       distance = c.fetch(:distance, CONF.initial_distance)
-      if known = known?(c, answer)
+      if ['w', 'well'].include?(answer)
+        c[:last_known] = now
+        known = c[:known] = true
+        distance *= 8
+      elsif known = known?(c, answer)
         c[:last_known] = now
         c[:known] = true
         distance *= 2

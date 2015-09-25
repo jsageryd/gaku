@@ -128,10 +128,11 @@ module Gaku
     def ask_if_known
       answer = nil
       while answer.nil?
-        case @input.gets('Known [y/n]? ').strip.downcase
+        case @input.gets('Known [y/n/w]? ').strip.downcase
         when 'y', 'yes' then answer = true
         when 'n', 'no'  then answer = false
-        else @canvas.puts('Please say yes or no.')
+        when 'w', 'well' then answer = 'well'
+        else @canvas.puts('Please say yes or no, or well for well known.')
         end
       end
       answer
