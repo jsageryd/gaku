@@ -18,6 +18,9 @@ initial distance as set in config will be used. By default, the initial distance
 of a card is 8, meaning that a known card will be moved down 16 places and an
 unknown card will be moved down 4 places after its first appearance.
 
+## Demo
+[![Gaku demo](https://asciinema.org/a/cq4o27wpy1hngvp9ploeffcmt.png)](https://asciinema.org/a/cq4o27wpy1hngvp9ploeffcmt?autoplay=1)
+
 ## Installation
 1. Clone this repo.
 2. Set your `$PATH` so that `bin/gaku` is accessible (or just run it from
