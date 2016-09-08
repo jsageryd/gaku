@@ -17,7 +17,7 @@ module Gaku
     ]
 
     DEATH = [
-      'Adieu, mes amis. Je vais la gloire.',
+      'Adieu, mes amis. Je vais à la gloire.',
       'All is lost.',
       'Beautiful.',
       'Drink to me!',
