@@ -1,0 +1,77 @@
+[
+  {
+    "front": "frog",
+    "back": "konn",
+    "match": "konn"
+  },
+  {
+    "front": "fly",
+    "back": "kärbes",
+    "match": "kärbes"
+  },
+  {
+    "front": "snail",
+    "back": "tigu",
+    "match": "tigu"
+  },
+  {
+    "front": "horse",
+    "back": "hobune",
+    "match": "hobune"
+  },
+  {
+    "front": "hippopotamus",
+    "back": "jõehobu",
+    "match": "jõehobu"
+  },
+  {
+    "front": "cat",
+    "back": "kass",
+    "match": "kass"
+  },
+  {
+    "front": "monkey",
+    "back": "ahv",
+    "match": "ahv"
+  },
+  {
+    "front": "bird",
+    "back": "lind",
+    "match": "lind"
+  },
+  {
+    "front": "rhinoceros",
+    "back": "ninasarvik",
+    "match": "ninasarvik"
+  },
+  {
+    "front": "lizard",
+    "back": "roomaja",
+    "match": "roomaja"
+  },
+  {
+    "front": "fox",
+    "back": "rebane",
+    "match": "rebane"
+  },
+  {
+    "front": "fish",
+    "back": "kala",
+    "match": "kala"
+  },
+  {
+    "front": "dog",
+    "back": "koir",
+    "match": "koir"
+  },
+  {
+    "front": "giraffe",
+    "back": "kaelkirjak",
+    "match": "kaelkirjak"
+  },
+  {
+    "front": "ant",
+    "back": "sipelgas",
+    "match": "sipelgas"
+  }
+]
