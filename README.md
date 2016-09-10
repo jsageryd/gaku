@@ -1,5 +1,4 @@
 # Gaku
-
 Gaku is an experimental
 [SRS](https://en.wikipedia.org/wiki/Spaced_repetition#Software).
 
