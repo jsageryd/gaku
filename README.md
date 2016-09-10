@@ -74,7 +74,7 @@ earlier is overridden by files loaded later.
 
 ## Example run
     $ gaku
-    Gaku 1.1.0
+    Gaku 1.2.0
 
     Pick a deck:
       0) finnish_animals
