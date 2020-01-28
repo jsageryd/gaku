@@ -1,0 +1,77 @@
+[
+  {
+    "front": "frog",
+    "back": "лягушка",
+    "match": "lyagushka"
+  },
+  {
+    "front": "fly",
+    "back": "муха",
+    "match": "muha"
+  },
+  {
+    "front": "snail",
+    "back": "улитка",
+    "match": "ulitka"
+  },
+  {
+    "front": "horse",
+    "back": "лошадь",
+    "match": "loshad'"
+  },
+  {
+    "front": "hippopotamus",
+    "back": "бегемот",
+    "match": "begemot"
+  },
+  {
+    "front": "cat",
+    "back": "кот",
+    "match": "kot"
+  },
+  {
+    "front": "monkey",
+    "back": "обезьяна",
+    "match": "obez'yana"
+  },
+  {
+    "front": "bird",
+    "back": "птица",
+    "match": "ptitsa"
+  },
+  {
+    "front": "rhinoceros",
+    "back": "носорог",
+    "match": "nosorog"
+  },
+  {
+    "front": "lizard",
+    "back": "ящерица",
+    "match": "yasheritsa"
+  },
+  {
+    "front": "fox",
+    "back": "лиса",
+    "match": "lisa"
+  },
+  {
+    "front": "fish",
+    "back": "рыба",
+    "match": "ryba"
+  },
+  {
+    "front": "dog",
+    "back": "собака",
+    "match": "sobaka"
+  },
+  {
+    "front": "giraffe",
+    "back": "жираф",
+    "match": "zhiraf"
+  },
+  {
+    "front": "ant",
+    "back": "муравей",
+    "match": "muravey"
+  }
+]
