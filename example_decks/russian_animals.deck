@@ -73,5 +73,10 @@
     "front": "ant",
     "back": "муравей",
     "match": "muravey"
+  },
+  {
+    "front": "hedgehog",
+    "back": "ёж",
+    "match": "yosh"
   }
 ]
